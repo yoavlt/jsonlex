@@ -1,13 +1,17 @@
 defmodule Jsonlex.MixProject do
   use Mix.Project
 
+  @description "Simple jsonl storage"
+
   def project do
     [
       app: :jsonlex,
       version: "0.1.0",
       elixir: "~> 1.9",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      description: @description,
+      deps: deps(),
+      package: package()
     ]
   end
 
@@ -15,6 +19,13 @@ defmodule Jsonlex.MixProject do
   def application do
     [
       extra_applications: [:logger]
+    ]
+  end
+
+  defp package() do
+    [maintainers: ["Takuma Yoshida"],
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/yoavlt/one_signal"},
     ]
   end
 
