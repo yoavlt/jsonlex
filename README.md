@@ -2,9 +2,9 @@
 
 Jsonlex is `jsonl` file format logger. This provide simple storage approach.
 
-Jsonlex can write json data concurrently that prevent applications slow down. We can analize unstructure data using like `Pandas` etc. This module uses `Jason` for json encoder. It allows this module blazing fast writing jsonl files.
+Jsonlex can write json data concurrently that prevent applications slow down. We can analyze unstructure data using like `Pandas` etc. This module uses `Jason` for json encoder. It allows this module blazing fast writing jsonl files.
 
-And fortunately, elixir can handle huge amount files using multicore processes and have massive tools easily.
+And fortunately, elixir can handle huge amount files utilizing multicore processes and have massive tools easily.
 
 ```elixir
   iex> Jsonlex.start_link :jsonl, filename: "/tmp/some_filename.jsonl"
