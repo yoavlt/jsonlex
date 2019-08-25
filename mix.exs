@@ -23,6 +23,7 @@ defmodule Jsonlex.MixProject do
     [
       {:timex, "~> 3.5"},
       {:jason, "~> 1.1"},
+      {:ex_doc, "~> 0.21", only: :dev, runtime: false}
     ]
   end
 end

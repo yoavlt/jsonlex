@@ -7,14 +7,14 @@ Jsonlex can write json data concurrently that prevent applications slow down. We
 And fortunately, elixir can handle huge amount files using multicore processes and have massive tools easily.
 
 ```elixir
-  iex> Jsonlex.start_link :logger, filename: "/tmp/some_filename.jsonl"
-  iex> Jsonlex.puts :logger, %{"ts" => DateTime.now("Etc/UTC") |> DateTime.to_unix, "hoge" => "fuga"}
+  iex> Jsonlex.start_link :jsonl, filename: "/tmp/some_filename.jsonl"
+  iex> Jsonlex.puts :jsonl, %{"ts" => DateTime.now("Etc/UTC") |> DateTime.to_unix, "hoge" => "fuga"}
 ```
 
 Jsonlex allow datetime format.
 
 ```elixir
-  iex> Jsonlex.start_link :logger, formatter: "/tmp/some_storage/%Y-%m-%d-%H.jsonl"
+  iex> Jsonlex.start_link :jsonl, format: "/tmp/some_storage/%Y-%m-%d-%H.jsonl"
 ```
 
 ## Installation
