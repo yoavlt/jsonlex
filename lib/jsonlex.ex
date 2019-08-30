@@ -35,8 +35,8 @@ defmodule Jsonlex do
       iex> Jsonlex.start_link :jsonl, format: "/tmp/some_storage/%Y-%m-%d-%H.jsonl"
 
   """
-  def start_link(name, opts \\ []) do
-    GenServer.start_link __MODULE__, opts, name: name
+  def start_link(opts \\ []) do
+    GenServer.start_link __MODULE__, opts, name: opts[:name] || __MODULE__
   end
 
   @doc """
