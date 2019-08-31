@@ -8,7 +8,7 @@ And fortunately, elixir can handle huge amount files utilizing multicore process
 
 ```elixir
   iex> Jsonlex.start_link :jsonl, filename: "/tmp/some_filename.jsonl"
-  iex> Jsonlex.puts :jsonl, %{"ts" => DateTime.now("Etc/UTC") |> DateTime.to_unix, "hoge" => "fuga"}
+  iex> Jsonlex.puts :jsonl, %{"ts" => DateTime.now("Etc/UTC") |> elem(1) |> DateTime.to_unix, "hoge" => "fuga"}
 ```
 
 Jsonlex allow datetime format.
